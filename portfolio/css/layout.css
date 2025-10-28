@@ -14,20 +14,6 @@ body {
 
 /* Header styles */
 .page-header {
-  background-color: #0074D9;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.header-content h1 {
-  margin-bottom: 5px;
-}
-
-.header-content p {
-  font-size: 1.1em;
-/* Custom header unique design */
-.page-header {
   position: relative;
   background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   color: #fff;
@@ -50,6 +36,12 @@ body {
   z-index: 1;
 }
 
+.header-content h1 {
+  margin-bottom: 5px;
+}
+
+.header-content p {
+  font-size: 1.1em;
 }
 
 /* Navigation styles */
@@ -177,6 +169,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .page-nav ul li {
     margin: 10px 0;
   }
