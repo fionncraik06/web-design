@@ -172,18 +172,3 @@ section h2 {
     flex-direction: column;
   }
 }
-
-/* Overrides for black theme */
-.page-header, .page-nav ul {
-  background-color: #000 !important;
-}
-.page-header h1 {
-  font-family: 'Playfair Display', serif !important;
-  font-size: 3rem !important;
-}
-.page-header p {
-  font-size: 1.3rem !important;
-}
-.page-nav ul li a {
-  color: #fff !important;
-}
