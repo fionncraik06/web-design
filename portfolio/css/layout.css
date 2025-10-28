@@ -174,3 +174,18 @@ body {
     margin: 10px 0;
   }
 }
+
+/* Unique header design inspired by Week 4 lab (bird website) */
+.page-header {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+}
+
+.header-content p {
+  font-size: 1.3rem;
+}
