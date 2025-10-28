@@ -1,225 +1,45 @@
-/* Navigation bar from W3Schools: https://www.w3schools.com/css/css_navbar.asp */
-/* Flexbox layout from W3Schools: https://www.w3schools.com/css/css3_flexbox.asp */
-/* Responsive media queries from W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* W3Schools refs: Nav https://www.w3schools.com/css/css_navbar_horizontal.asp | Flexbox https://www.w3schools.com/css/css3_flexbox.asp | Media queries https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Roboto',sans-serif;line-height:1.6;color:#333;background:#fff}
 
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-}
+/* Sidebar */
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:220px;background:#000;color:#fff;padding:20px;display:flex;flex-direction:column;align-items:flex-start}
+.logo-title img{width:60px;height:60px;border-radius:50%}
+.logo-title h1{font-size:1.8rem;margin:10px 0 5px}
+.logo-title p{font-size:.9rem}
+.page-nav ul{list-style:none;padding:0;margin-top:20px}
+.page-nav li{margin-bottom:10px}
+.page-nav a{color:#fff;text-decoration:none;font-weight:bold}
+.page-nav a:hover{text-decoration:underline}
 
-/* header with logo+title, using a grayscale hero image */
-.page-header {
-  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 80px 20px;
-  text-align: center;
-  color: #fff;
-}
-.page-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-}
-.logo-title {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-.logo-title img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  filter: grayscale(100%);
-}
-.logo-title h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin: 0;
-}
-.page-header p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.3rem;
+/* Main content */
+.main-content{margin-left:240px;padding:40px 20px}
+.main-content section{margin-bottom:40px}
+.main-content h2{margin-bottom:20px;font-size:1.8rem;color:#000}
+
+/* Gallery (images in colour) */
+.image-gallery figure{margin-bottom:20px}
+.image-gallery img{width:100%;border-radius:8px}
+.image-gallery figcaption{margin-top:8px;font-size:.9em;color:#555}
+
+/* Contact form */
+.contact-me form{display:flex;flex-direction:column}
+.contact-me label{margin-bottom:5px;font-weight:bold}
+.contact-me input,.contact-me textarea{padding:10px;border:1px solid #ccc;border-radius:4px;font-size:1em}
+.contact-me input[type=submit]{margin-top:10px;padding:12px;border:none;background:#000;color:#fff;cursor:pointer;border-radius:4px}
+.contact-me input[type=submit]:hover{background:#333}
+
+/* Footer */
+#footer-layout{text-align:center;padding:20px;background:#f5f5f5;color:#666}
+#footer-layout a{color:#000;text-decoration:none}
+#footer-layout a:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:800px){
+  .sidebar{position:static;width:100%;flex-direction:row;align-items:center}
+  .page-nav ul{display:flex;flex-direction:row;margin-left:auto}
+  .page-nav li{margin:0 10px}
+  .main-content{margin-left:0}
 }
 
-/* navigation bar */
-.page-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 10px 0;
-  background-color: #000;
-}
-.page-nav ul li {
-  margin: 0 15px;
-}
-.page-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.page-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* two-column layout */
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-.left-col { flex: 2; }
-.right-col { flex: 1; }
-
-/* headings & text */
-section h2 {
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  color: #000;
-  font-family: 'Playfair Display', serif;
-}
-.about-me p,
-.work-experience p {
-  margin-bottom: 20px;
-}
-
-/* gallery */
-.image-gallery figure {
-  margin-bottom: 20px;
-}
-.image-gallery img {
-  width: 100%;
-  border-radius: 8px;
-  filter: grayscale(100%);
-}
-.image-gallery figcaption {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-/* contact form */
-.contact-me form {
-  display: flex;
-  flex-direction: column;
-}
-.contact-me label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.contact-me input,
-.contact-me textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-.contact-me input[type="submit"] {
-  margin-top: 10px;
-  padding: 12px;
-  border: none;
-  background-color: #000;
-  color: #fff;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.contact-me input[type="submit"]:hover {
-  background-color: #333;
-}
-
-/* footer */
-#footer-layout {
-  text-align: center;
-  padding: 20px;
-  background-color: #f5f5f5;
-  color: #666;
-}
-.footer-separator {
-  margin: 0 5px;
-  color: #999;
-}
-.footer-layout a,
-.footer-layout a:visited {
-  color
-/* Override all fonts to Roboto */
-body, h1, h2, p, a, li {
-  font-family: 'Roboto', sans-serif !important;
-}
-: #000;
-/* Sidebar header layout override from W3Schools flexbox */
-.page-header {
- position: fixed;
- left: 0;
- top: 0;
- bottom: 0;
- width: 220px;
- background-color: #000;
- color: #fff;
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 20px;
- z-index: 1000;
-}
-.page-header .logo-title {
- flex-direction: column;
- align-items: center;
-}
-.page-nav {
- position: fixed;
- left: 0;
- top: 200px;
- width: 220px;
-}
-.main-style, .main-content {
- margin-left: 240px;
-}
-.image-gallery img {
- filter: none !important;
-}
-body, h1, h2, p, a, li {
- font-family: 'Roboto', sans-serif !important;
-}
-
-  text-decoration: none;
-}
-.footer-layout a:hover {
-  text-decoration: underline;
-}
-
-/* responsive behaviour */
-@media (max-width: 600px) {
-  .page-nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .page-nav ul li {
-    margin: 10px 0;
-  }
-  .columns {
-    flex-direction: column;
-  }
-}
