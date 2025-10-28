@@ -169,6 +169,41 @@ body, h1, h2, p, a, li {
   font-family: 'Roboto', sans-serif !important;
 }
 : #000;
+/* Sidebar header layout override from W3Schools flexbox */
+.page-header {
+ position: fixed;
+ left: 0;
+ top: 0;
+ bottom: 0;
+ width: 220px;
+ background-color: #000;
+ color: #fff;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 20px;
+ z-index: 1000;
+}
+.page-header .logo-title {
+ flex-direction: column;
+ align-items: center;
+}
+.page-nav {
+ position: fixed;
+ left: 0;
+ top: 200px;
+ width: 220px;
+}
+.main-style, .main-content {
+ margin-left: 240px;
+}
+.image-gallery img {
+ filter: none !important;
+}
+body, h1, h2, p, a, li {
+ font-family: 'Roboto', sans-serif !important;
+}
+
   text-decoration: none;
 }
 .footer-layout a:hover {
