@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-/* Apply Roboto to everything */
 body, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea, button {
   font-family: 'Roboto', sans-serif;
 }
@@ -17,11 +16,10 @@ body {
   background: #fff;
 }
 
-/* Header: smaller and left-aligned */
 .page-header {
   background: #000;
   color: #fff;
-  padding: 20px 20px;   /* reduced height */
+  padding: 20px 20px;  
   text-align: left;
 }
 
@@ -46,7 +44,6 @@ body {
   margin-top: 5px;
 }
 
-/* Navigation bar */
 .page-nav ul {
   list-style: none;
   display: flex;
@@ -69,7 +66,6 @@ body {
   text-decoration: underline;
 }
 
-/* Two-column layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +83,6 @@ body {
   flex: 1;
 }
 
-/* Section headings */
 .about-me h2,
 .work-experience h2,
 .image-gallery h2,
@@ -97,13 +92,11 @@ body {
   color: #000;
 }
 
-/* Paragraph spacing */
 .about-me p,
 .work-experience p {
   margin-bottom: 20px;
 }
 
-/* Gallery (images remain in full colour) */
 .image-gallery figure {
   margin-bottom: 20px;
 }
@@ -111,7 +104,7 @@ body {
 .image-gallery img {
   width: 100%;
   border-radius: 8px;
-  filter: none;     /* ensure photos stay coloured */
+  filter: none;   
 }
 
 .image-gallery figcaption {
@@ -120,7 +113,6 @@ body {
   color: #555;
 }
 
-/* Contact form */
 .contact-me form {
   display: flex;
   flex-direction: column;
@@ -172,7 +164,6 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .page-nav ul {
     flex-direction: column;
