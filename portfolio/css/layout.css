@@ -1,0 +1,159 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header styles */
+.page-header {
+  background-color: #0074D9;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header-content h1 {
+  margin-bottom: 5px;
+}
+
+.header-content p {
+  font-size: 1.1em;
+}
+
+/* Navigation styles */
+.page-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.page-nav ul li {
+  margin: 0 15px;
+}
+
+.page-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Section layout */
+.container {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-content h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #0074D9;
+}
+
+/* About & Work content */
+.container-content .content p {
+  margin-bottom: 20px;
+}
+
+/* Image gallery */
+.image-gallery .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.an-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.image-caption {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Contact form */
+.contact-me form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-me form p {
+  margin-bottom: 15px;
+}
+
+.contact-me label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-me input,
+.contact-me textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.contact-me input[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  background-color: #0074D9;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-me input[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Footer styling */
+#footer-layout {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.footer-separator {
+  margin: 0 5px;
+  color: #999;
+}
+
+.footer-text a {
+  color: #0074D9;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .page-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-nav ul li {
+    margin: 10px 0;
+  }
+}
