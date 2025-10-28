@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -11,19 +12,22 @@ body {
   background-color: #fff;
 }
 
-/* Logo and title styles */
-.logo-title {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+/* Header styles: black background and updated font sizes */
+.page-header {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
 }
-.logo-title img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
+
 .page-header h1 {
+  margin-bottom: 5px;
+  font-size: 3rem;
   font-family: 'Playfair Display', serif;
+}
+
+.page-header p {
+  font-size: 1.3rem;
 }
 
 /* Navigation styles */
@@ -34,21 +38,24 @@ body {
   flex-wrap: wrap;
   margin: 0;
   padding: 10px 0;
-  background-color: #0074D9;
+  background-color: #000;
 }
+
 .page-nav ul li {
   margin: 0 15px;
 }
+
 .page-nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
+
 .page-nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Column layout */
+/* Two-column layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -57,31 +64,39 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
 }
+
 .left-col {
   flex: 2;
 }
+
 .right-col {
   flex: 1;
 }
 
 /* Section headings */
-h2 {
+section h2 {
   margin-bottom: 20px;
   font-size: 1.8em;
-  color: #0074D9;
+  color: #000;
 }
 
-/* Section paragraphs */
-p {
+/* About & Work content */
+.about-me p,
+.work-experience p {
   margin-bottom: 20px;
 }
 
 /* Image gallery */
-.image-gallery .an-image img {
+.image-gallery figure {
+  margin-bottom: 20px;
+}
+
+.image-gallery img {
   width: 100%;
   border-radius: 8px;
 }
-.image-caption {
+
+.image-gallery figcaption {
   margin-top: 8px;
   font-size: 0.9em;
   color: #555;
@@ -92,13 +107,12 @@ p {
   display: flex;
   flex-direction: column;
 }
-.contact-me form p {
-  margin-bottom: 15px;
-}
+
 .contact-me label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+
 .contact-me input,
 .contact-me textarea {
   padding: 10px;
@@ -106,18 +120,20 @@ p {
   border-radius: 4px;
   font-size: 1em;
 }
+
 .contact-me input[type="submit"] {
   margin-top: 10px;
   padding: 12px;
   border: none;
-  background-color: #0074D9;
+  background-color: #000;
   color: #fff;
   font-size: 1em;
   cursor: pointer;
   border-radius: 4px;
 }
+
 .contact-me input[type="submit"]:hover {
-  background-color: #005fa3;
+  background-color: #333;
 }
 
 /* Footer styling */
@@ -127,23 +143,24 @@ p {
   background-color: #f5f5f5;
   color: #666;
 }
+
 .footer-separator {
   margin: 0 5px;
   color: #999;
 }
-.footer-text a {
-  color: #0074D9;
+
+.footer-layout a,
+.footer-layout a:visited {
+  color: #000;
   text-decoration: none;
 }
-.footer-text a:hover {
+
+.footer-layout a:hover {
   text-decoration: underline;
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  .columns {
-    flex-direction: column;
-  }
   .page-nav ul {
     flex-direction: column;
     align-items: center;
@@ -151,4 +168,22 @@ p {
   .page-nav ul li {
     margin: 10px 0;
   }
+  .columns {
+    flex-direction: column;
+  }
+}
+
+/* Overrides for black theme */
+.page-header, .page-nav ul {
+  background-color: #000 !important;
+}
+.page-header h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 3rem !important;
+}
+.page-header p {
+  font-size: 1.3rem !important;
+}
+.page-nav ul li a {
+  color: #fff !important;
 }
