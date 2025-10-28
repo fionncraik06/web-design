@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Personal portfolio for Fionn showcasing projects and experience.">
+  <!-- meta tag below is used for Internet Explorer and mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fionn's Portfolio</title>
   <!-- W3Schools Google Font example: https://www.w3schools.com/howto/howto_google_fonts.asp -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- add your stylesheet and any other styling code, e.g. google fonts -->
   <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
+  <!-- The header section holds the logo, title, and subtitle that appear at the top of every page -->
   <header class="page-header">
+    <!-- A div is a block-level container used to group elements together for styling and layout -->
     <div class="logo-title">
       <img src="https://unsplash.com/photos/a-computer-monitor-sitting-on-top-of-a-desk-next-to-a-keyboard-60fUnXgxE14" alt="Profile logo">
       <h1>Fionn</h1>
@@ -20,7 +24,7 @@
     </div>
   </header>
 
-  <!-- W3Schools horizontal navbar: https://www.w3schools.com/css/css_navbar_horizontal.asp -->
+  <!-- Navigation menu linking to different sections of the page -->
   <nav class="page-nav">
     <ul>
       <li><a href="#about">About Me</a></li>
@@ -30,9 +34,10 @@
     </ul>
   </nav>
 
-  <!-- W3Schools Flexbox layout: https://www.w3schools.com/css/css3_flexbox.asp -->
+  <!-- Main content uses a Flexbox layout for a two‑column design -->
   <main class="columns">
     <div class="left-col">
+      <!-- The section element semantically groups related content and can be linked using its id -->
       <section id="about" class="about-me">
         <h2>About Me</h2>
         <p>Hi, I'm Fionn, a student based in Dublin studying Computing for Business. I have a passion for technology and enjoy exploring how creative design and programming combine to build engaging experiences. Over the past few years I have learned the foundations of web development in both school while studying computer science and college, especially web design where there is a more heavy focus on HTML, CSS and JavaScript, and I am now branching out into more advanced topics like user interface design and responsive layouts. Outside of coding, I love Rugby and Star Wars. These hobbies inspire my design choices and help me stay creative. The goal of this portfolio is to present my work in a professional and accessible way so that I can share my interests and achievements with potential employers, collaborators, and fellow students. I hope you enjoy exploring my projects and learning more about who I am and what I do, as well as seeing how my creative pursuits influence my technical work and drive my curiosity.</p>
@@ -46,19 +51,20 @@
 
     <div class="right-col">
       <section id="gallery" class="image-gallery">
-            <h2>Image Gallery</h2>
-            <figure class="an-image">
-                <img src="images/compimg.jpeg">
-                <figcaption>Coding Projects</figcaption>
-            </figure>
-            <figure class="an-image">
-                <img src="images/all_blacks_2_900x.webp">
-                <figcaption>Rugby</figcaption>
-            </figure>
-            <figure class="an-image">
-                <img src="images/revenge.jpg">
-                <figcaption>Favourite Movie</figcaption>
-          </figure>
+        <h2>Image Gallery</h2>
+        <figure class="an-image">
+          <img src="images/compimg.jpeg" alt="Coding projects image">
+          <figcaption>Coding Projects</figcaption>
+        </figure>
+        <figure class="an-image">
+          <img src="images/all_blacks_2_900x.webp" alt="Rugby photo">
+          <figcaption>Rugby</figcaption>
+        </figure>
+        <figure class="an-image">
+          <img src="images/revenge.jpg" alt="Star Wars Revenge movie poster">
+          <figcaption>Favourite Movie</figcaption>
+        </figure>
+      </section>
     </div>
   </main>
 
@@ -75,4 +81,3 @@
   
 </body>
 </html>
-
