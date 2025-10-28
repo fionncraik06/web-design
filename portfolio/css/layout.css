@@ -140,22 +140,6 @@ h2 {
   background: #333;
 }
 
-/* footer styling */
-#footer-layout {
-  text-align: center;
-  padding: 20px;
-  background: #f5f5f5;
-  color: #666;
-}
-
-#footer-layout a {
-  color: #000;
-  text-decoration: none;
-}
-
-#footer-layout a:hover {
-  text-decoration: underline;
-}
 
 /* responsive adjustments */
 @media (max-width: 600px) {
