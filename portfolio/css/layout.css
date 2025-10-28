@@ -1,36 +1,29 @@
-/* Base Reset */
+/* References: W3Schools CSS Navigation Bar: https://www.w3schools.com/css/css_navbar.asp | W3Schools Responsive Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
 }
-
-/* Header styles: black background and updated font sizes */
 .page-header {
   background-color: #000;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
 }
-
 .page-header h1 {
   margin-bottom: 5px;
   font-size: 3rem;
   font-family: 'Playfair Display', serif;
 }
-
 .page-header p {
   font-size: 1.3rem;
 }
-
-/* Navigation styles */
 .page-nav ul {
   list-style: none;
   display: flex;
@@ -40,22 +33,17 @@ body {
   padding: 10px 0;
   background-color: #000;
 }
-
 .page-nav ul li {
   margin: 0 15px;
 }
-
 .page-nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-
 .page-nav ul li a:hover {
   text-decoration: underline;
 }
-
-/* Two-column layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -64,55 +52,41 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
 }
-
 .left-col {
   flex: 2;
 }
-
 .right-col {
   flex: 1;
 }
-
-/* Section headings */
 section h2 {
   margin-bottom: 20px;
   font-size: 1.8em;
   color: #000;
 }
-
-/* About & Work content */
 .about-me p,
 .work-experience p {
   margin-bottom: 20px;
 }
-
-/* Image gallery */
 .image-gallery figure {
   margin-bottom: 20px;
 }
-
 .image-gallery img {
   width: 100%;
   border-radius: 8px;
 }
-
 .image-gallery figcaption {
   margin-top: 8px;
   font-size: 0.9em;
   color: #555;
 }
-
-/* Contact form */
 .contact-me form {
   display: flex;
   flex-direction: column;
 }
-
 .contact-me label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 .contact-me input,
 .contact-me textarea {
   padding: 10px;
@@ -120,7 +94,6 @@ section h2 {
   border-radius: 4px;
   font-size: 1em;
 }
-
 .contact-me input[type="submit"] {
   margin-top: 10px;
   padding: 12px;
@@ -131,35 +104,27 @@ section h2 {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .contact-me input[type="submit"]:hover {
   background-color: #333;
 }
-
-/* Footer styling */
 #footer-layout {
   text-align: center;
   padding: 20px;
   background-color: #f5f5f5;
   color: #666;
 }
-
 .footer-separator {
   margin: 0 5px;
   color: #999;
 }
-
 .footer-layout a,
 .footer-layout a:visited {
   color: #000;
   text-decoration: none;
 }
-
 .footer-layout a:hover {
   text-decoration: underline;
 }
-
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .page-nav ul {
     flex-direction: column;
