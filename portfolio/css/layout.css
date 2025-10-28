@@ -1,29 +1,65 @@
-/* References: W3Schools CSS Navigation Bar: https://www.w3schools.com/css/css_navbar.asp | W3Schools Responsive Media Queries: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Navigation bar from W3Schools: https://www.w3schools.com/css/css_navbar.asp */
+/* Flexbox layout from W3Schools: https://www.w3schools.com/css/css3_flexbox.asp */
+/* Responsive media queries from W3Schools: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
 }
+
+/* header with logo+title, using a grayscale hero image */
 .page-header {
-  background-color: #000;
-  color: #fff;
-  padding: 60px 20px;
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 80px 20px;
   text-align: center;
+  color: #fff;
 }
-.page-header h1 {
-  margin-bottom: 5px;
-  font-size: 3rem;
+.page-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+.logo-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.logo-title img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+.logo-title h1 {
   font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
 }
 .page-header p {
+  position: relative;
+  z-index: 1;
   font-size: 1.3rem;
 }
+
+/* navigation bar */
 .page-nav ul {
   list-style: none;
   display: flex;
@@ -44,6 +80,8 @@ body {
 .page-nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* two-column layout */
 .columns {
   display: flex;
   flex-wrap: wrap;
@@ -52,33 +90,37 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
 }
-.left-col {
-  flex: 2;
-}
-.right-col {
-  flex: 1;
-}
+.left-col { flex: 2; }
+.right-col { flex: 1; }
+
+/* headings & text */
 section h2 {
   margin-bottom: 20px;
   font-size: 1.8em;
   color: #000;
+  font-family: 'Playfair Display', serif;
 }
 .about-me p,
 .work-experience p {
   margin-bottom: 20px;
 }
+
+/* gallery */
 .image-gallery figure {
   margin-bottom: 20px;
 }
 .image-gallery img {
   width: 100%;
   border-radius: 8px;
+  filter: grayscale(100%);
 }
 .image-gallery figcaption {
   margin-top: 8px;
   font-size: 0.9em;
   color: #555;
 }
+
+/* contact form */
 .contact-me form {
   display: flex;
   flex-direction: column;
@@ -107,6 +149,8 @@ section h2 {
 .contact-me input[type="submit"]:hover {
   background-color: #333;
 }
+
+/* footer */
 #footer-layout {
   text-align: center;
   padding: 20px;
@@ -125,6 +169,8 @@ section h2 {
 .footer-layout a:hover {
   text-decoration: underline;
 }
+
+/* responsive behaviour */
 @media (max-width: 600px) {
   .page-nav ul {
     flex-direction: column;
